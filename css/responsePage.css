@@ -1,0 +1,40 @@
+.div1{
+    border-bottom: 5px solid #67B0D0;
+    /* border-bottom: solid orange; */
+    margin: 50px auto;
+    height:390px;
+    width: 40%;
+
+}
+.img1{
+    height: 100%;
+    width: 100%;
+}
+.imgdiv{
+    height: 70%;
+    width: 50%;
+    margin: auto;
+}
+.paradiv{
+    height:108px;
+    width:70%;
+    /* border:2px solid grey; */
+    margin:auto;
+}
+.para{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-kerning: 3px;
+    color: 	#808080;
+    text-align: center;
+}
+.para2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-kerning: 2px;
+    font-size: medium;
+    text-align: center;
+}
+a{
+    color: #67B0D0;
+    text-decoration: none;
+}

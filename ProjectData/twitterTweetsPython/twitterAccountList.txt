@@ -1,0 +1,10 @@
+City42			discard
+karachiupdate	discard
+khitraffic		select
+traffickarachi	observe	
+khi_alerts		discard for karachi_news not relate to 
+ktrafficpolicee	select
+karachi_update	discard
+kcnew92			discard
+*kcnews92		discard
+karachi_times	discard
