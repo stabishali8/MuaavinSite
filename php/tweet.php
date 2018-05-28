@@ -20,7 +20,7 @@
                 {
                    die("error" . mysqli_error($db_select));  
                 }
-                $sql = "SELECT tweet,created_at from twitter order by created_at Desc limit 20 offset 0";
+                $sql = "SELECT * FROM twitter ORDER BY created_at DESC LIMIT 10";
                 $result = mysqli_query($conn,$sql);
                 if(!$result)
                 {
