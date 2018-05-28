@@ -1,12 +1,15 @@
 var customIcons = {
     dharna: {
-      icon: 'img/map-marker/download.png'
+      icon: 'img/map-marker/mvn_protest.png'
     },
     accident: {
-      icon: 'img/map-marker/accident.png'
+      icon: 'img/map-marker/mvn_accident.png'
     },
     traffic: {
-      icon: 'img/map-marker/traffic.png'
+      icon: 'img/map-marker/mvn_traffic.png'
+    },
+    hazard: {
+      icon: 'img/map-marker/mvn_hazard.png'
     }
   };
 
@@ -53,13 +56,30 @@ function initialize() {
       var xml = data.responseXML;
       var markers = xml.documentElement.getElementsByTagName("marker");
       for (var i = 0; i < markers.length; i++) {
-        //var name = markers[i].getAttribute("comment");
-        //var address = markers[i].getAttribute("address");
+        var place_name = markers[i].getAttribute("place_name");
+        var reported_at = markers[i].getAttribute("reported_at");
         var type = markers[i].getAttribute("type");
         var point = new google.maps.LatLng(
             parseFloat(markers[i].getAttribute("lat")),
             parseFloat(markers[i].getAttribute("lng")));
-        var htmls = "<b>" + type + "</b> <br/>" + type;
+        switch(type)
+        {
+          case "1":
+            type =  "dharna";
+            console.log('dharna');
+            break;
+          case "2":
+            type = "dharna";
+            console.log('dharna 1');
+            break;
+          case "3":
+            type = "traffic";
+            console.log('dharna 2');
+            break;
+          default:
+            type = "hazard";     
+        }  
+        var htmls = "<b>" + place_name  + "</b> <br/>" + reported_at;
         var icon = customIcons[type] || {};
         var marker = new google.maps.Marker({
           map: map,
@@ -118,6 +138,3 @@ function initialize() {
   }
 
   function doNothing() {}
-
-
-      
