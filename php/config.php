@@ -1,6 +1,6 @@
 <?php
-$host="localhost";
-$username="root";
-$password="test";
-$database="muaavin";
+$host='localhost';
+$username='root';
+$password='';
+$database='thevoda1_muaavin';
 ?>
