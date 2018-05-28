@@ -11,7 +11,7 @@
     {
        die("error" . mysqli_error($db_select));  
     }
-    $query = "(SELECT tweet,created_at FROM twitter WHERE created_at ORDER BY created_at DESC) LIMIT 3 OFFSET 0";
+    $query = "SELECT * FROM twitter ORDER BY created_at DESC LIMIT 3";
     $result = mysqli_query($connection,$query);
     if(!$result)
     {
